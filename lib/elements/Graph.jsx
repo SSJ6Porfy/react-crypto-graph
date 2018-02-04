@@ -18,13 +18,11 @@ class Graph extends React.Component {
         }
     }
 
-    
-
     render() {
         return (
             <div>
                 <button className="currency-btn" onClick={this.toggleCurrency}>{this.state.current}</button>
-                <CryptoGraph path={`https://s3-us-west-2.amazonaws.com/pianocloud-adrianjewell/${this.state.current}+USD+Bitfinex+Historical+Data+copy.csv`}/>
+                <CryptoGraph symbol={this.state.current} path={`https://s3-us-west-2.amazonaws.com/pianocloud-adrianjewell/${this.state.current}+USD+Bitfinex+Historical+Data+copy.csv`}/>
             </div>
         );
     }
