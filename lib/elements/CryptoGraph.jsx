@@ -35,7 +35,6 @@ const CryptoGraph = ({path, symbol}) => {
     	}]
     });
 
-    console.log(csv);
   	var csvLines = [];
     var points = [];
   	csvLines = csv.split(/[\r?\n|\r|\n]+/);
@@ -71,7 +70,7 @@ const CryptoGraph = ({path, symbol}) => {
   };
   xhr.send();
   return (
-    <div>CryptoGraph
+    <div>
       <div id="chartContainer"></div>
     </div>
   );
