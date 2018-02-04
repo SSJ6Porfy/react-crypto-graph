@@ -26,7 +26,7 @@ const CryptoGraph = ({path, symbol}) => {
     		title: "Price"
     	},
     	toolTip: {
-    		content: "Date: {x}<br /><strong>Price:</strong><br />Open: {y[0]}, Close: {y[3]}<br />High: {y[1]}, Low: {y[2]}"
+    		content: "Date: {x}<br /><strong>Price:</strong><br />Open: {y[0]}, Close: {y[1]}<br />High: {y[2]}, Low: {y[3]}"
     	},
     	data: [{
     		type: "candlestick",
@@ -38,7 +38,7 @@ const CryptoGraph = ({path, symbol}) => {
   	var csvLines = [];
     var points = [];
   	csvLines = csv.split(/[\r?\n|\r|\n]+/);
-  	for (var i = 0; i < csvLines.length; i++) {
+  	for (var i = 0; i < csvLines.length/8; i++) {
   		if (csvLines[i].length > 0) {
   			points = csvLines[i].split(",");
   			dataPoints.push({
