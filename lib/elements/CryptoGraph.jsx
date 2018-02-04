@@ -1,7 +1,8 @@
 import React from 'react';
+// import CanvasJS from '../vendor/chart';
 // import CanvasJS from 'canvasjs';
 
-const CryptoGraph = () => {
+const CryptoGraph = ({path}) => {
   function getDataPointsFromCSV(csv) {
     var dataPoints = [];
 
@@ -35,7 +36,8 @@ const CryptoGraph = () => {
     });
 
     console.log(csv);
-  	var csvLines = points = [];
+  	var csvLines = [];
+    var points = [];
   	csvLines = csv.split(/[\r?\n|\r|\n]+/);
   	for (var i = 0; i < csvLines.length; i++) {
   		if (csvLines[i].length > 0) {
@@ -58,7 +60,7 @@ const CryptoGraph = () => {
   	chart.render();
   }
   let xhr = new XMLHttpRequest();
-  xhr.open('GET', `http://localhost:8000/netflix-stock-price.csv`);
+  xhr.open('GET', path);
   xhr.onload = function() {
     if (xhr.status === 200) {
         getDataPointsFromCSV(xhr.responseText);
@@ -69,8 +71,15 @@ const CryptoGraph = () => {
   };
   xhr.send();
   return (
-    <div>CryptoGraph</div>
+    <div>CryptoGraph
+      <div id="chartContainer"></div>
+    </div>
   )
 }
+
+CryptoGraph.defaultProps = {
+  path: `http://localhost:8080/netflix-stock-price.csv`
+};
+
 
 export default CryptoGraph;
