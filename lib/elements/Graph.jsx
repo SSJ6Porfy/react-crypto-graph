@@ -1,5 +1,5 @@
 import React from 'react';
-import CryptoGraph from "CryptoGraph";
+import CryptoGraph from "./CryptoGraph";
 
 class Graph extends React.Component {
     constructor(props) {
