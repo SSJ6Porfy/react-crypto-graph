@@ -1,6 +1,6 @@
 {
   "name": "react-crypto-graph",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A node package for Crypto Currency Graphs",
   "main": "build/index.js",
   "scripts": {

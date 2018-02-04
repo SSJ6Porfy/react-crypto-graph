@@ -9,7 +9,6 @@ class Graph extends React.Component {
             current: "BTC"
         };
         this.toggleCurrency = this.toggleCurrency.bind(this);
-        this.movingAverage = this.movingAverage.bind(this);
     }
 
     toggleCurrency() {
