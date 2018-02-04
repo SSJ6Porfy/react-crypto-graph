@@ -35,7 +35,7 @@ const CryptoGraph = ({path, symbol}) => {
     	}]
     });
 
-    console.log(csv);
+    
   	var csvLines = [];
     var points = [];
   	csvLines = csv.split(/[\r?\n|\r|\n]+/);
