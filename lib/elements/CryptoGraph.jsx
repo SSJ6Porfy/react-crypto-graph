@@ -26,7 +26,7 @@ const CryptoGraph = ({path, symbol}) => {
     		title: "Price"
     	},
     	toolTip: {
-    		content: "Date: {x}<br /><strong>Price:</strong><br />Open: {y[0]}, Close: {y[3]}<br />High: {y[1]}, Low: {y[2]}"
+    		content: "Date: {x}<br /><strong>Price:</strong><br />Open: {y[0]}, Close: {y[1]}<br />High: {y[2]}, Low: {y[3]}"
     	},
     	data: [{
     		type: "candlestick",
@@ -35,11 +35,14 @@ const CryptoGraph = ({path, symbol}) => {
     	}]
     });
 
+<<<<<<< HEAD
     
+=======
+>>>>>>> 5993e9ee9358fa9ffd9fb7f553859b02997ff95d
   	var csvLines = [];
     var points = [];
   	csvLines = csv.split(/[\r?\n|\r|\n]+/);
-  	for (var i = 0; i < csvLines.length; i++) {
+  	for (var i = 0; i < csvLines.length/8; i++) {
   		if (csvLines[i].length > 0) {
   			points = csvLines[i].split(",");
   			dataPoints.push({
@@ -71,7 +74,7 @@ const CryptoGraph = ({path, symbol}) => {
   };
   xhr.send();
   return (
-    <div>CryptoGraph
+    <div>
       <div id="chartContainer"></div>
     </div>
   );

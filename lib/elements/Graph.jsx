@@ -1,5 +1,6 @@
 import React from 'react';
 import CryptoGraph from "./CryptoGraph";
+import Button from "./button";
 
 class Graph extends React.Component {
     constructor(props) {
@@ -21,8 +22,8 @@ class Graph extends React.Component {
 
     render() {
         return (
-            <div>
-                <button className="currency-btn" onClick={this.toggleCurrency}>{this.state.current}</button>
+            <div className="crypto-graph-wrapper">
+                <Button className="currency-btn" onClick={this.toggleCurrency}>{this.state.current}</Button>
                 <CryptoGraph symbol={this.state.current} path={`https://s3-us-west-2.amazonaws.com/pianocloud-adrianjewell/${this.state.current}+USD+Bitfinex+Historical+Data+copy.csv`}/>
             </div>
         );
