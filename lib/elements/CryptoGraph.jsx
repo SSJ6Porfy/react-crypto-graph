@@ -11,10 +11,10 @@ const CryptoGraph = ({path}) => {
     	theme: "light2", // "light1", "light2", "dark1", "dark2"
     	exportEnabled: true,
     	title: {
-    		text: "Netflix Stock Price in 2016"
+    		text: "BitCoin Prices in USD"
     	},
     	subtitles: [{
-    		text: "Weekly Averages"
+    		text: "Monthly Averages"
     	}],
     	axisX: {
     		interval: 1,
@@ -78,7 +78,7 @@ const CryptoGraph = ({path}) => {
 }
 
 CryptoGraph.defaultProps = {
-  path: `http://localhost:8080/netflix-stock-price.csv`
+  path: `https://s3-us-west-2.amazonaws.com/pianocloud-adrianjewell/BTC+USD+Bitfinex+Historical+Data+copy.csv`
 };
 
 
