@@ -2,7 +2,7 @@ import React from 'react';
 // import CanvasJS from '../vendor/chart';
 // import CanvasJS from 'canvasjs';
 
-const CryptoGraph = ({path}) => {
+const CryptoGraph = ({path, symbol}) => {
   function getDataPointsFromCSV(csv) {
     var dataPoints = [];
 
@@ -11,7 +11,7 @@ const CryptoGraph = ({path}) => {
     	theme: "light2", // "light1", "light2", "dark1", "dark2"
     	exportEnabled: true,
     	title: {
-    		text: "Netflix Stock Price in 2016"
+    		text: `${symbol} Stock Price`
     	},
     	subtitles: [{
     		text: "Weekly Averages"
@@ -74,11 +74,12 @@ const CryptoGraph = ({path}) => {
     <div>CryptoGraph
       <div id="chartContainer"></div>
     </div>
-  )
-}
+  );
+};
 
 CryptoGraph.defaultProps = {
-  path: `http://localhost:8080/netflix-stock-price.csv`
+	path: "",
+	symbol: "BTC"
 };
 
 
