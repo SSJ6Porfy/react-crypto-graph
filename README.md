@@ -2,6 +2,12 @@
 
 React-Crypto-Graph is an NPM package for adding crypto currency graphs complete with trading tools to web applications.
 
+Builders:
+1. [Justin Deiderich](https://www.linkedin.com/in/justindiederich/), Business Dev
+2. [Cory Kane](https://www.linkedin.com/in/cory-kane/), Developer 
+3. [Adrian Jewell](https://www.linkedin.com/in/adrian-jewell-%E7%88%B1%E5%BE%B7%E5%8D%8E-391a43142/), Developer
+4. [Porifio Matias](https://www.linkedin.com/in/porfiriomatias/), Developer 
+
 <img src="https://github.com/SSJ6Porfy/react-crypto-graph/blob/master/media/BTC-Price-Screenshot.png"></img>
 
 * **Simple API:** React-Crypto-Graph makes it painless to create interactive graphs.
