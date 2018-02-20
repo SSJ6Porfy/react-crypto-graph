@@ -1,6 +1,5 @@
 import React from 'react';
-// import CanvasJS from '../vendor/chart';
-// import CanvasJS from 'canvasjs';
+import CanvasJS from "./canvasjs";
 
 const CryptoGraph = ({path, symbol}) => {
   function getDataPointsFromCSV(csv) {
@@ -58,6 +57,7 @@ const CryptoGraph = ({path, symbol}) => {
   	}
   	chart.render();
   }
+
   let xhr = new XMLHttpRequest();
   xhr.open('GET', path);
   xhr.onload = function() {
